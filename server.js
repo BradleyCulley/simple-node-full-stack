@@ -45,10 +45,12 @@ app.get("/sumTwoNumbers/:a/:b", (req, res) => {
 
   request(requestOptions, (error, response, body) => {
     console.log("a", req.params.a);
-    console.log("b", req.params.a);
+    console.log("b", req.params.b);
+
+    var theSum = parseInt(req.params.a) + parseInt(req.params.b);
 
     res.send({
-      sum: 1,
+      sum: theSum,
     });
   });
 });
