@@ -24,12 +24,13 @@ app.get("/average", (req, res) => {
   };
 
   request(requestOptions, (error, response, body) => {
-    const sum = body.reduce(
-      (accumulator, entry) => accumulator + entry.adjClose,
-      0
-    );
+    console.log("body", body);
+    // const sum = body.reduce(
+    //   (accumulator, entry) => accumulator + entry.adjClose,
+    //   0
+    // );
     res.send({
-      sum,
+      sum: 1,
     });
   });
 });
