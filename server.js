@@ -35,6 +35,24 @@ app.get("/average", (req, res) => {
   });
 });
 
+app.get("/sumTwoNumbers/:a/:b", (req, res) => {
+  const requestOptions = {
+    url: "https://api.tiingo.com/tiingo/daily/aapl/prices?startDate=2019-01-02&token=7f152d077759157d903064be4bc4b6c2fab11ddf",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  request(requestOptions, (error, response, body) => {
+    console.log("a", req.params.a);
+    console.log("b", req.params.a);
+
+    res.send({
+      sum: 1,
+    });
+  });
+});
+
 app.get("/add", (req, res) => {
   const requestOptions = {
     url: "https://api.tiingo.com/tiingo/daily/aapl/prices?startDate=2019-01-02&token=7f152d077759157d903064be4bc4b6c2fab11ddf",
