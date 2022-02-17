@@ -24,8 +24,8 @@ function displayData(data) {
 }
 
 function handelSumming() {
-  var a = prompt("What is the first number?");
-  var b = prompt("What is the second number?");
+  var a = prompt("What is the 1st number?");
+  var b = prompt("What is the 2nd number?");
 
   fetch(`sumTwoNumbers/${a}/${b}`)
     .then((response) => response.json())
