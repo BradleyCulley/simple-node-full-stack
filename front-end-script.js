@@ -22,3 +22,17 @@ function displayData(data) {
 
   outputArea.innerHTML = output;
 }
+
+function handelSumming() {
+  var a = prompt("What is the first number?");
+  var b = prompt("What is the second number?");
+
+  fetch(`/sumTwoNumbers/${a}/${b}`)
+    .then((response) => response.json())
+    .then((data) => {
+      alert(`The result is: ${data.sum}`);
+      console.log(data);
+    });
+}
+
+handelSumming();
